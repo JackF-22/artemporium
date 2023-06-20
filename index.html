@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OS Art Emporium</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <a href="#main"><h1>OS Art Emporium</h1></a>
+        <ul class="navul">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#customframes">Our Custom Frames</a></li>
+            <li><a href="#notice">Special Notice</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="menu()">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+        <div class="mobilemenu">
+            <ul>
+                <li><a href="#main" onclick="menu()">Home</a></li>
+                <li><a href="#about" onclick="menu()">About</a></li>
+                <li><a href="#customframes" onclick="menu()">Our Custom Frames</a></li>
+                <li><a href="#notice" onclick="menu()">Special Notice</a></li>
+                <li><a href="#contact" onclick="menu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main" class="maindiv">
+        <div class="heading">
+            <h1>Preservation, Protection, and the Highest Standards of Craftsmanship</h1>
+            <h2>Serving with Integrity and Respect</h2>
+        </div>
+
+        <a href="#about"><button class="learnmore">Learn More <i class="fa-sharp fa-solid fa-chevron-down"></i></button></a>
+    </div>
+
+    <div id="about" class="aboutdiv reveals">
+        <div class="leftcol">
+            <img style="width: 95%" src="fatherson.jpg">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.4574801562635!2d-72.37824522413591!3d41.298910401478885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e622528eeb9873%3A0xf659d3ab35266fed!2sArt%20Emporium%20of%20Old%20Saybrook!5e0!3m2!1sen!2sus!4v1685500533681!5m2!1sen!2sus" width="95%" height="45%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="rightcol">
+            <h1>About Us</h1>
+            <br>
+            <h2>Robert Jerome and his wife bought the business in 1983, a month after their son Bryan was born. Now Bob and Bryan (pictured on the left) run the business together and do all custom framing on the premises.</h2>
+            <br>
+            <h2>
+                We specialize in custom built picture framing. We do not sell art supplies. Please call ahead as we prefer to receive frame objects by appointment.
+            </h2>
+            <br>
+
+            <h2 style="font-family: 'Pathway Extreme', sans-serif;">Hours</h2>
+            <h3>Sunday  - Monday: Closed<br>
+                Tuesday - Friday: 10:00 AM - 5:30 PM<br>
+                Saturday:         10:00 AM - 5:00 PM</h3>
+            
+                <br>
+
+            <h4 style="font-family: 'Pathway Extreme', sans-serif;">Phone: (860) 388 - 1419</h4>
+            <h4 style="font-family: 'Pathway Extreme', sans-serif;">Email: robert@artemporiumoldsaybrook.net</h4>
+        </div>
+    </div>
+
+    <div class="framesdiv reveals" id="customframes">
+        <h1>Our Custom Framed Art</h1>
+        <br>
+        <h2>Consider Framing...</h2>
+
+        <div class="optioncontainer">
+            <div class="option childrens">
+                <img class="bg" src="childrensart.jpg">
+                <div class="layer"></div>
+                <h1>Children's Art</h1>
+            </div>
+            <div class="option war">
+                <img class="bg" src="warawards.jpg">
+                <div class="layer"></div>
+                <h1>War-Time Awards</h1>
+            </div>
+            <div class="option flag">
+                <img class="bg" src="flags.webp">
+                <div class="layer"></div>
+                <h1>Flags</h1>
+            </div>
+            <div class="option maps">
+                <img class="bg" src="map.avif">
+                <div class="layer"></div>
+                <h1>Maps</h1>
+            </div>
+            <div class="option diploma">
+                <img class="bg" src="diploma.jpg">
+                <div class="layer"></div>
+                <h1>Diplomas</h1>
+            </div>
+        </div>
+
+        <br><br>
+        <h2>Some Of Our Work:</h2>
+        <div class="optioncontainer">
+            <div class="example">
+                <img src="frame.jpg">
+            </div>
+            <div class="example">
+                <img src="pics.jpg">
+            </div>
+            <div class="example">
+                <img src="secondframe.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="noticediv reveals" id="notice">
+        <h1>Special Notice to Our Customers</h1>
+        <br><h2>I would like to thank everyone who has come to visit us since reopening in June of 2020.
+            You are wonderful people and we are blessed to call you friends.
+            We are continuing to ask that you make an appointment before coming into the store. 
+            This allows an opportunity to give you a personal shopping experience, and for us to be attentive to your needs.
+            We are allowing customers to shop without an appointment - but only if there are no appointment conflicts.
+            Please call ahead - it is best for both you and the Emporium.
+            Thank you again for allowing us to serve you!
+            <br>Bob
+        </h2>
+        <img src="bob.jpg" class="noticeimg bob">
+        <img src="window.jpg" class="noticeimg shop">
+    </div>
+
+    <div class="contactdiv reveals" id="contact">
+        <form class="container" action="https://formsubmit.co/jtfinn22@gmail.com" method="POST" >
+            <div class="contactform">
+                <h1>Contact Us</h1>
+                <input type="text" name="firstname" id="FirstName" placeholder="First Name" class="half">
+                <input type="text" name="lastname" id="LastName" placeholder="Last Name" class="half">
+                <br>
+                <input type="email" name="email" id="Email" placeholder="Email Address" class="full">
+                <br>
+                <input type="text" namme="subject" id="subject" placeholder="Subject" class="full">
+                <br>
+                <textarea name="message" id="Message" placeholder="Your Message"></textarea>
+                <br>
+                <button class="learnmore sbt" name="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#customframes">Our Custom Frames</a></li>
+            <li><a href="#notice">Special Notice</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <br>
+        <h3>Follow Us On Twitter:</h3>
+        <a href="https://twitter.com/artemporiumofos"><img style="height: 25px;" src="2021 Twitter logo - blue.png"></a>
+        <br>
+        <a href="https://www.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_15592656.htm#query=artistic%20background&position=15&from_view=search&track=ais"><h4>Images by Freepik</h4></a>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/e906391d90.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,643 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 14vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+    transition: all .8s;
+    top: 0;
+    z-index: 5;
+    background-color: transparent;
+    position: fixed;
+    line-height: 10vh;
+}
+
+nav.scrolled {
+    background-color: white;
+}
+
+nav.active {
+    background-color: white;
+}
+
+nav h1 {
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0px 25px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.2s all ease-in-out;
+}
+
+nav a:hover {
+    color: lightcoral;
+}
+
+nav a.active {
+    border-bottom: 2px solid red;
+}
+
+.burger {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    margin: auto 0;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.burger span {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    transition: 0.5s all ease-in-out;
+}
+
+.burger.active .line1 {
+    transform: rotate(35deg) translateY(12px);
+}
+.burger.active .line2 {
+    opacity: 0;
+}
+.burger.active .line3 {
+    transform: rotate(-35deg) translateY(-12px);
+}
+
+.mobilemenu {
+    height: 100vh;
+    background-color: whitesmoke;
+    width: 100%;
+    position: absolute;
+    top: -100vh;
+    transition: .7s all ease-in-out;
+    left: 0;
+}
+
+.mobilemenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 55px;
+}
+
+.mobilemenu a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    transition: 0.2s all ease-in-out;
+}
+.mobilemenu a:hover {
+    color: lightcoral;
+}
+
+.mobilemenu.active {
+    top: 0;
+}
+
+.maindiv {
+    background-image: url("mainbg.jpg");
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.heading {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+.heading h1 {
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+.heading h2 {
+    margin-top: 5%;
+    font-family: 'Poltawski Nowy', serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.learnmore {
+    height: 7vh;
+    width: 200px;
+    margin-top: 10vh;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: lightcoral;
+    font-family: 'Pathway Extreme', sans-serif;
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.learnmore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.learnmore:hover::before {
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+}
+
+.learnmore::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 99%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid black;
+    transform: scale(1.3, 1.3);
+}
+
+.learnmore:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+/* ABOUT SECTION */
+.aboutdiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Pathway Extreme', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 45px;
+}
+
+.leftcol {
+    text-align: center;
+    width: 100%;
+}
+
+.rightcol {
+    width: 90%;
+    text-align: center;
+    line-height: 5vh;
+    margin: 0 auto;
+}
+
+.rightcol h2 {
+    font-family: 'Forum', cursive;
+}
+
+/* CUSTOM FRAMES SECTION */
+.framesdiv {
+    /* height: 100vh; */
+    width: 100%;
+    background-image: url("framesbg.jpg");
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+.framesdiv h1 {
+    font-family: 'Pathway Extreme', sans-serif;
+}
+.framesdiv h2 {
+    font-family: 'Poltawski Nowy', serif;
+}
+
+.optioncontainer {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.option {
+    height: 25vh;
+    width: 18%;
+    border: 2px solid white;
+    margin: 1px;
+    position: relative;
+    transition: all ease-in 0.5s;
+}
+
+.option:hover {
+    transform: rotate(-5deg);
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+}
+
+.layer {
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.option h1 {
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Pathway Extreme', sans-serif;
+}
+
+.example {
+    height: 40vh;
+    width: 31%;
+    margin: 5px;
+    box-shadow: 3px 3px 3px 0px;
+    transition: all 0.4s ease-out;
+}
+
+.example:hover {
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.example img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* SPECIAL NOTICE SECTION */
+.noticediv {
+    padding: 40px;
+    /* min-height: 100vh; */
+}
+
+.noticediv h1 {
+    font-family: 'Pathway Extreme', sans-serif;
+}
+
+.noticediv h2 {
+    width: 60%;
+    font-family: 'Forum', cursive;
+    line-height: 10vh;
+    font-size: 1.35rem;
+    float: left;
+}
+
+.noticeimg {
+    float: right;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+}
+
+/* CONTACT SECTION */
+.contactdiv {
+    /* height: 100vh; */
+    width: 100%;
+    background-image: url("contactbg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 10vh;
+    padding-bottom: 100px;
+}
+
+form {
+    height: 100%;
+    width: 45%;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Pathway Extreme', sans-serif;
+    padding-top: 45px;
+}
+
+input {
+    height: 3vh;
+    padding: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+input:active {
+    border: none;
+    border-bottom: 2px solid lightcoral;
+}
+input:focus {
+    border: none;
+    border-bottom: 2px solid lightcoral;
+    outline: none;
+}
+
+.half {
+    width: 38%;
+}
+
+.full {
+    width: 78%;
+}
+
+textarea {
+    font-family: verdana;
+    max-width: 90%;
+    width: 78%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    margin-top: 40px;
+    height: 10vh;
+}
+
+textarea:focus, textarea:active {
+    border-bottom: 2px solid lightcoral;
+    outline: none;
+}
+
+.sbt {
+    margin-top: 40px;
+    height: 8vh;
+    width: 40%;
+}
+
+/* FOOTER */
+footer {
+    padding-top: 10px;
+    background-color: rgb(14, 11, 38);
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Pathway Extreme', sans-serif;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 25px;
+    transition: 0.5s all ease;
+}
+
+footer a:hover {
+    color: lightcoral;
+}
+
+footer img {
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
+
+/* Web Queries */
+@media screen and (max-width: 1215px) {
+    .navul {
+        display: none;
+    }
+    .burger, span {
+        display: block;
+    }
+    .heading h1 {
+        font-size: 2.5rem;
+    }
+    .contactdiv form {
+        width: 55%;
+    }
+} 
+
+@media screen and (max-width: 900px) {
+    .noticediv h2 {
+        font-size: 1.1rem;
+        line-height: 5vh;
+        width: 100%;
+    }
+    .heading h1 {
+        font-size: 2.5rem;
+        padding-bottom: 25px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .heading h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+    .maps, .diploma {
+        display: none;
+    }
+    .option {
+        width: 30%;
+    }
+
+    .bob {
+        float: none;
+        width: 50%;
+    }
+    .shop {
+        width: 50%;
+    }
+    .contactdiv form {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav h1 {
+        font-size: 1.7rem;
+    }
+    .heading h1 {
+        padding-top: -10vh;
+        font-size: 1.7rem;
+    }
+    .heading h2 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    h4 {
+        font-size: 14px;
+    }
+
+    .maps, .diploma {
+        display: none;
+    }
+    .option {
+        width: 30%;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .leftcol {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 15px;
+        width: 100%;
+    }
+    .leftcol img {
+        width: 50%;
+        height: 250px;
+        margin: 10px auto;
+    }
+    .leftcol iframe {
+        margin: auto;
+    }
+    .rightcol {
+        order: -1;
+    }
+    .aboutdiv {
+        grid-template-columns: 1fr;
+    }
+    footer ul {
+        flex-direction: column;
+    }
+    footer li {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav h1 {
+        font-size: 1.4rem;
+    }
+    .mobilemenu a {
+        font-size: 1.2rem;
+    }
+    .heading h2 {
+        margin-top: 15%;
+        font-size: 1.2rem;
+    }
+    .contactdiv form {
+        width: 90%;
+    }
+    .half {
+        width: 78%;
+    }
+    .example {
+        width: 60%;
+    }
+    .option h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    nav h1 {
+        font-size: 1.1rem;
+    }
+    .heading h1 {
+        font-size: 1.1rem;
+    }
+    .learnmore {
+        width: 65%;
+    }
+    .burger span {
+        width: 25px;
+        height: 2px;
+    }
+    .burger.active .line1 {
+        transform: rotate(35deg) translateY(9px);
+    }
+    .burger.active .line2 {
+        opacity: 0;
+    }
+    .burger.active .line3 {
+        transform: rotate(-35deg) translateY(-9px);
+    }
+    .mobilemenu a {
+        line-height: 5vh;
+        font-size: 1rem;
+    }
+    .mobilemenu {
+        padding: 0;
+    }
+    .contactdiv form input {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .rightcol {
+        line-height: 2vh;
+    }
+}
+
+.reveals {
+    position: relative;
+    padding-top: 100px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.reveals.active {
+    padding-top: 25px;
+    opacity: 1;
+}
